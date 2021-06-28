@@ -27,8 +27,9 @@ $squadre = [
     ],
 ]; 
 
-// $squadraCasaUno = $squadre[0][squadraCasa][nome];
-// $squadraOspiteUno = $squadre[0][squadraOspite][nome];
+// prima prova 
+$squadraCasaUno = $squadre[0][squadraCasa][nome];
+$squadraOspiteUno = $squadre[0][squadraOspite][nome];
 $squadreUno = $squadre[0][squadraCasa][nome] . " - " . $squadre[0][squadraOspite][nome];
 $punteggioUno = " | " . $squadre[0][squadraCasa][punti] . " - ". $squadre[0][squadraOspite][punti];
 $primaGiornata = $squadreUno . $punteggioUno;
@@ -37,6 +38,14 @@ $squadreDue = $squadre[1][squadraCasa][nome] . " - " . $squadre[1][squadraOspite
 $punteggioDue = " | " . $squadre[1][squadraCasa][punti] . " - ". $squadre[1][squadraOspite][punti];
 $secondaGiornata = $squadreDue . $punteggioDue;
 
+
+// seconda prova 
+echo "<ul>";
+for ($i = 0; $i < count($squadre); $i++) {
+    echo "<h2>" . $squadre[$i][squadraCasa][nome] . "</h2>";
+    echo "<h2>" . "Punteggio: " . $squadre[$i][squadraCasa][punti] . "</h2>";
+}
+echo "</ul>";
 
 
 
@@ -55,6 +64,8 @@ $secondaGiornata = $squadreDue . $punteggioDue;
     
     <body>
         <h2>
+
+        <!-- prima prova  -->
         <?php
         echo '<pre>';
         

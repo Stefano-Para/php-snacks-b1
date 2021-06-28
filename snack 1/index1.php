@@ -4,7 +4,7 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php 
 
-$string = [
+$squadre = [
     [
         "squadraCasa" => [
             "nome" => "Neo Tokyo Tre",
@@ -27,6 +27,19 @@ $string = [
     ],
 ]; 
 
+// $squadraCasaUno = $squadre[0][squadraCasa][nome];
+// $squadraOspiteUno = $squadre[0][squadraOspite][nome];
+$squadreUno = $squadre[0][squadraCasa][nome] . " - " . $squadre[0][squadraOspite][nome];
+$punteggioUno = " | " . $squadre[0][squadraCasa][punti] . " - ". $squadre[0][squadraOspite][punti];
+$primaGiornata = $squadreUno . $punteggioUno;
+
+$squadreDue = $squadre[1][squadraCasa][nome] . " - " . $squadre[1][squadraOspite][nome];
+$punteggioDue = " | " . $squadre[1][squadraCasa][punti] . " - ". $squadre[1][squadraOspite][punti];
+$secondaGiornata = $squadreDue . $punteggioDue;
+
+
+
+
 ?>
 
 
@@ -42,7 +55,15 @@ $string = [
     
     <body>
         <h2>
-        <?php echo($string); ?>
+        <?php
+        echo '<pre>';
+        
+        echo($primaGiornata);
+        echo("\r\n" );
+        echo($secondaGiornata);
+        
+        echo '</pre>';
+        ?>
         </h2>
 
     </body>
